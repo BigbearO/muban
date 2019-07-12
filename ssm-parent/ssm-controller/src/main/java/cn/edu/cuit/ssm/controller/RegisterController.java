@@ -28,12 +28,21 @@ public class RegisterController {
 		User user=new User(name, pass, address, phone);
 		
 		// 到数据库比对
-        int ret=userService.insert(user);
-        if (ret>0) {
-			return "success";
-		} else {
-            model.addAttribute("msg", "用户名已存在");         
-			return "register";
-		}
+		// 到数据库比对
+				int result = userService.findUserByName(name);
+				if (result > 0) {
+					model.addAttribute("msg", "用户名已存在");
+					return "register";
+
+				} else {
+					int ret = userService.insert(user);
+					if (ret > 0) {
+						return "success";
+					} else {
+						model.addAttribute("msg1", "注册失败，请重试");
+						return "register";
+					}
+				}
+
 	}
 }

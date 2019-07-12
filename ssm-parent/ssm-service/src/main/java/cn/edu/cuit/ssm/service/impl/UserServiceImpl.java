@@ -26,5 +26,11 @@ public class UserServiceImpl implements UserService {
 		// TODO Auto-generated method stub
 		return userMapper.insert(user);
 	}
+	
+	@Override
+	public int findUserByName(String name) {
+		// TODO Auto-generated method stub
+		return userMapper.findUserByName(name);
+	}
 
 }
