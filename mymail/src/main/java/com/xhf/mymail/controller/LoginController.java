@@ -8,8 +8,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.xhf.mymail.service.UserService;
 
-
-
 @Controller
 public class LoginController {
 	
