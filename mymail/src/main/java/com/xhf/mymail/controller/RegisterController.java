@@ -30,7 +30,7 @@ public class RegisterController {
 		// åˆ°æ•°æ®åº“æ¯”å¯¹
 				int result = userService.findUserByName(name);
 				if (result > 0) {
-					model.addAttribute("msg", "ç”¨æˆ·åå·²å­˜åœ¨");
+					model.addAttribute("msg", "ÓÃ»§ÃûÒÑ´æÔÚ");
 					return "register";
 
 				} else {
@@ -38,7 +38,7 @@ public class RegisterController {
 					if (ret > 0) {
 						return "forward:/toLogin";
 					} else {
-						model.addAttribute("msg1", "æ³¨å†Œå¤±è´¥ï¼Œè¯·é‡è¯•");
+						model.addAttribute("msg1", "×¢²áÊ§°Ü£¬ÇëÖØÊÔ");
 						return "register";
 					}
 				}
