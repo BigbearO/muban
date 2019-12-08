@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+    <!-- 配置项的顺序不能颠倒 ,properties里的属性可以放在其他文件里然后通过resource属性引入如下，-->
+
+
+    <!-- <setting/>-->
+
+
+    <!--别名 -->
+    <!--
+	<typeAliases> 
+		 <typeAlias alias="role" type="com.learn.ssm.chapter4.pojo.Role"/> 
+		<package name="com.learn.ssm.chapter4.pojo" />
+	</typeAliases>
+	-->
+
+    <!-- 类型处理 -->
+    <!--  
+	<typeHandlers>
+		 <typeHandler jdbcType="VARCHAR" javaType="string" handler="com.learn.ssm.chapter4.typehandler.MyTypeHandler" 
+			上下二选一，用的时候连同此句一区注释掉
+		<package name="com.learn.ssm.chapter4.typehandler" />
+
+	</typeHandlers>
+	-->
+
+    <!-- 对象工厂-->
+    <!-- <objectFactory/> -->
+
+    <!--  插件-->
+    <!--  <plugins/> -->
+
+
+    <!-- 数据库环境 -->
+
+
+    <!-- 
+	<databaseIdProvider type="DB_VENDOR">
+		<property name="Oracle" value="oracle" />
+		<property name="MySQL" value="mysql" />
+		<property name="DB2" value="db2" />
+	</databaseIdProvider>
+	 
+	<databaseIdProvider
+		type="自定义DatabaseIdProvider的路径">
+		<property name="msg" value="自定义DatabaseIdProvider" />
+	</databaseIdProvider>
+	-->
+
+    <!--映射文件-->
+    <mappers>
+        <mapper resource="mapper/RoleMapper.xml"/>
+    </mappers>
+</configuration>
